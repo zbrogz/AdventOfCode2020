@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fs = require('fs');
 
 function getTreeCount(right, down) {
     let treeCount = 0;
@@ -27,8 +27,8 @@ const slopes = [
 ];
 const treeCounts = [0, 0, 0, 0, 0];
 
-var input = fs.readFileSync('./input.txt', 'utf-8');
-var lines = input.split('\n');
+const input = fs.readFileSync('./input.txt', 'utf-8');
+const lines = input.split('\n');
 
 slopes.forEach((slope, i) => {
     treeCounts[i] = getTreeCount(slope.right, slope.down);
